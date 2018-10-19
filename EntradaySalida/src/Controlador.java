@@ -2,13 +2,13 @@ import javax.swing.JOptionPane;
 
 public class Controlador {
 	
-	
+	fydfjfdjgf ljjh;
 	
 	public static void main(String[] args) {
-		String [] entrada = {"E/S programada","E/S por interrupción","E/S por DMA"};
-		String [] dma = {"Transparente","Robo de ciclo","Ráfaga"};
+		String [] entrada = {"E/S programada","E/S por interrupciÃ³n","E/S por DMA"};
+		String [] dma = {"Transparente","Robo de ciclo","RÃ¡faga"};
 		
-		JOptionPane.showMessageDialog(null,"Módulo de Entrada y Salida","Bienvenido",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(null,"MÃ³dulo de Entrada y Salida","Bienvenido",JOptionPane.PLAIN_MESSAGE);
 		String a = (String) JOptionPane.showInputDialog(null,"Seleccione una", "Entrada y Salida",JOptionPane.QUESTION_MESSAGE,null,entrada, entrada[0]);
 		int a1 = Integer.parseInt(a);
 		switch(a1) {
