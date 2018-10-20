@@ -2,7 +2,6 @@ import javax.swing.JOptionPane;
 
 public class Controlador {
 	
-	fydfjfdjgf ljjh;
 	
 	public static void main(String[] args) {
 		String [] entrada = {"E/S programada","E/S por interrupción","E/S por DMA"};
