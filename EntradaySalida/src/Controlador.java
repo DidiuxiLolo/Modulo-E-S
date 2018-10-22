@@ -28,39 +28,26 @@ public class Controlador {
 		if(a.equalsIgnoreCase("E/S por DMA")) {
 			String dm = (String) JOptionPane.showInputDialog(null,"Seleccione una", "E/S por DMA",JOptionPane.QUESTION_MESSAGE,null,dma, dma[0]);
 			if(dm.equalsIgnoreCase("Transparente")) {
-				
+				cpu.correrPrograma();
+				cpu.ejecutarInstrucciones();
+				cpu.solicitudDMA();
+				cpu.renunciaBus();
+				cpu.siguiendoPrograma();
 			}
-			if(a.equalsIgnoreCase("Robo de ciclo")) {
-				
+			if(dm.equalsIgnoreCase("Robo de ciclo")) {
+				cpu.correrPrograma();
+				cpu.usoBus();
+				cpu.aceptacion();
+				cpu.desactivación();
 			}
-			if(a.equalsIgnoreCase("Ráfaga")) {
-				
+			if(dm.equalsIgnoreCase("Ráfaga")) {
+				cpu.correrPrograma();
+                cpu.solicitudRABus();
+                cpu.aceptacion();
+                cpu.transferenciaBloques();                    
+                cpu.libertad(); 
 			}
-		}
-		/*switch(a1) {
-			case 1:
-				
-				break;
-			case 2:
-				cpu.mandarRead();
-				break;
-			case 3:
-				String dm = (String) JOptionPane.showInputDialog(null,"Seleccione una", "E/S por DMA",JOptionPane.QUESTION_MESSAGE,null,dma, dma[0]);
-				int dm1 = Integer.parseInt(dm);
-				switch(dm1)
-				{
-					case 1:
-						break;
-					case 2:
-						break;
-					case 3:
-						
-						break;
-				}
-				break;
-		}
-		*/
-			
+		}		
 				
 	}
 }

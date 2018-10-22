@@ -27,4 +27,55 @@ public class Microprocesador extends Dispositivos
 		JOptionPane.showMessageDialog(null,"Ejecutando programa","Procesador",JOptionPane.PLAIN_MESSAGE);
 		bus.espera();	
 	}
+	
+	public void usoBus() {
+		JOptionPane.showMessageDialog(null,"Utilizando bus","Procesador",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(null,"Se insertó un dispositivo: ","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
+		bus.solicitudBusRc();	
+	}
+	
+	public void aceptacion() {
+		JOptionPane.showMessageDialog(null,"Señal de aceptación de petición de bus (BACK)","Procesador",JOptionPane.PLAIN_MESSAGE);
+		bus.accesoMemoria();
+		bus.desactivandoBus();
+	}
+	
+	public void desactivación() {
+		JOptionPane.showMessageDialog(null,"Desactivando la concesión de ciclo (BACK)","Procesador",JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public void ejecutarInstrucciones() {
+		bus.mandarInstrucciones();
+		JOptionPane.showMessageDialog(null,"Ejecutando instrucciones","Procesador",JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public void solicitudDMA() {
+		JOptionPane.showMessageDialog(null,"Esperando solicitud del DMA","Procesador",JOptionPane.PLAIN_MESSAGE);
+		bus.transmitirDMA();
+	}
+	
+	public void renunciaBus() {
+		JOptionPane.showMessageDialog(null,"Renunciando a los buses de datos y direcciones","Procesador",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(null,"Activando línea de reconomiento de DMA","Procesador",JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public void siguiendoPrograma() {
+		bus.transferenciaDMA();
+		JOptionPane.showMessageDialog(null,"Ejecutando programa","Procesador",JOptionPane.PLAIN_MESSAGE);	
+	}
+	
+	public void solicitudRABus() {
+		JOptionPane.showMessageDialog(null,"Esperando solicitud del procesador del DMAC","Procesador",JOptionPane.PLAIN_MESSAGE);
+	}
+        
+    public void transferenciaBloques(){
+    	JOptionPane.showMessageDialog(null,"Iniciando Tranferencia de bloque de datos","Procesador",JOptionPane.PLAIN_MESSAGE);
+        bus.datos();
+        JOptionPane.showMessageDialog(null,"Tranferencia de bloque de datos exitosa","Procesador",JOptionPane.PLAIN_MESSAGE);
+    }
+       
+    public void libertad(){
+    	JOptionPane.showMessageDialog(null,"Liberando Bus...","DMAC",JOptionPane.PLAIN_MESSAGE);
+        bus.liberacion();
+    }
 }
